@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OJT計画 - Hiroaki Arimura OJT Plan</title>
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --bg-color: #ecf0f1;
+            --text-color: #34495e;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 0;
+        }
+
+        .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 40px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--secondary-color);
+            font-weight: 500;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .milestone {
+            padding: 100px 0;
+            background-color: var(--bg-color);
+        }
+
+        .section-title {
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 50px;
+            color: var(--secondary-color);
+        }
+
+        .timeline {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            padding: 60px 0;
+            /* パディングを増やして、上下のスペースを確保 */
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 70px;
+            /* 上からの位置を固定 */
+            left: 0;
+            right: 0;
+            height: 4px;
+            background-color: var(--secondary-color);
+        }
+
+        .milestone-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+            min-width: 150px;
+        }
+
+        .milestone-point {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            position: relative;
+            z-index: 2;
+            margin-bottom: 20px;
+            /* 点の下のスペースを増やす */
+        }
+
+        .milestone-content {
+            text-align: center;
+            max-width: 150px;
+        }
+
+
+        .milestone-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: var(--secondary-color);
+            margin-bottom: 5px;
+        }
+
+        .milestone-date {
+            font-size: 0.9em;
+            color: var(--text-color);
+        }
+
+        footer {
+            background-color: var(--secondary-color);
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+        }
+
+        @media (max-width: 768px) {
+            .timeline {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 20px 0;
+            }
+
+            .timeline::before {
+                top: 0;
+                bottom: 0;
+                left: 10px;
+                width: 4px;
+                height: auto;
+            }
+
+            .milestone-item {
+                flex-direction: row;
+                margin-bottom: 20px;
+                width: 100%;
+            }
+
+            .milestone-point {
+                margin-right: 20px;
+                margin-bottom: 0;
+            }
+
+            .milestone-content {
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">Hiroaki Arimura OJT Plan</div>
+            <ul class="nav-links">
+                <li><a href="index.html">ホーム</a></li>
+                <li><a href="self-intro.html">自己紹介</a></li>
+                <li><a href="vision.html">ビジョン</a></li>
+                <li><a href="ojt.html">OJT計画</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container" style="padding-top: 100px;">
+        <section class="milestone">
+            <h1 class="section-title">OJT計画</h1>
+
+            <div class="timeline">
+                <div class="milestone-item">
+                    <div class="milestone-point"></div>
+                    <div class="milestone-content">
+                        <h2 class="milestone-title">応用情報 取得</h2>
+                        <p class="milestone-date">2024年10月</p>
+                    </div>
+                </div>
+
+                <div class="milestone-item">
+                    <div class="milestone-point"></div>
+                    <div class="milestone-content">
+                        <h2 class="milestone-title">TOEIC830点 取得</h2>
+                        <p class="milestone-date">2025年6月</p>
+                    </div>
+                </div>
+
+                <div class="milestone-item">
+                    <div class="milestone-point"></div>
+                    <div class="milestone-content">
+                        <h2 class="milestone-title">TOEIC860点 取得</h2>
+                        <p class="milestone-date">2025年12月</p>
+                    </div>
+                </div>
+
+                <div class="milestone-item">
+                    <div class="milestone-point"></div>
+                    <div class="milestone-content">
+                        <h2 class="milestone-title">TOEIC900点 取得</h2>
+                        <p class="milestone-date">2026年6月</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            © 有村大旭. All rights reserved.
+        </div>
+    </footer>
+</body>
+
+</html>
