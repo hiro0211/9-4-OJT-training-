@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIグループが提供する価値 - Hiroaki Arimura OJT Plan</title>
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --bg-color: #ecf0f1;
+            --text-color: #34495e;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 0;
+        }
+
+        .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 40px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--secondary-color);
+            font-weight: 500;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        main {
+            padding-top: 100px;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            animation: fadeInUp 1s ease 0.5s both;
+        }
+
+        .value-section {
+            padding: 80px 0;
+        }
+
+        .value-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .value-item {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .value-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .value-item h3 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+        }
+
+        .value-item p {
+            color: var(--text-color);
+        }
+
+        footer {
+            background-color: var(--secondary-color);
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2em;
+            }
+
+            .hero p {
+                font-size: 1em;
+            }
+
+            .value-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .skills-section {
+            background-color: var(--bg-color);
+            padding-bottom: 60px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .skill-item {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .skill-item h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .skill-item ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .skill-item li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .skill-item li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">Hiroaki Arimura OJT Plan</div>
+            <ul class="nav-links">
+                <li><a href="index.html">ホーム</a></li>
+                <li><a href="self-intro.html">自己紹介</a></li>
+                <li><a href="BI-require.html">BIグループが望むスキル</a></li>
+                <li><a href="ojt.html">OJT計画</a></li>
+                <li><a href="vision.html">ビジョン</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>BIグループが望むスキル</h1>
+            </div>
+        </section>
+        <section class="value-section">
+            <div class="container">
+                <div class="value-grid">
+                    <div class="value-item">
+                        <h3>BIグループが提供する価値</h3>
+                        <p>エンジニアリング業界の設計業務を支援し、顧客の競争力向上に寄与する</p>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="container">
+                <div class="value-grid">
+                    <div class="value-item">
+                        <h3>BIグループのVISION</h3>
+                        <p>日常の業務を通じて顧客の課題をを発見
+                            自ら解決策の提案、サービスの提供し、
+                            顧客の唯一無二のパートナーとなる
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section skills-section">
+            <div class="container">
+                <h2>デジタル化提案に必要なスキル</h2>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <h3>①業務知識</h3>
+                        <ul>
+                            <li>顧客の言葉が分かる</li>
+                            <li>顧客の言葉の背景を理解している</li>
+                            <li>顧客の課題を発見できる</li>
+                        </ul>
+                    </div>
+                    <div class="skill-item">
+                        <h3>②開発力</h3>
+                        <ul>
+                            <li>出来上がりをイメージできる</li>
+                            <li>イメージを形にできるプログラミング力</li>
+                            <li>イメージを形にするために必要な情報を理解している</li>
+                        </ul>
+                    </div>
+                    <div class="skill-item">
+                        <h3>③IT知識</h3>
+                        <ul>
+                            <li>幅広いITの知識</li>
+                            <li>どの技術でどの程度、何ができるかを知っている</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 有村大旭. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

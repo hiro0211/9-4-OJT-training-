@@ -83,7 +83,7 @@
 
         .section-title {
             font-size: 2.5em;
-            text-align: center;
+            text-align: left;
             margin-bottom: 50px;
             color: var(--secondary-color);
         }
@@ -183,6 +183,67 @@
                 text-align: left;
             }
         }
+
+        .business-knowledge {
+            background-color: var(--bg-color);
+            padding-bottom: 50px;
+        }
+
+        .knowledge-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .knowledge-item {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            height: 100%;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .knowledge-item h3 {
+            margin-bottom: 15px;
+            padding: 5px 10px;
+            background-color: #3498db;
+            color: white;
+            border-radius: 4px;
+            display: inline-block;
+        }
+
+        .knowledge-item p {
+            flex-grow: 1;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .knowledge-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 100px 0 50px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            max-width: 600px;
+            margin: 0 auto;
+        }
     </style>
 </head>
 
@@ -193,46 +254,78 @@
             <ul class="nav-links">
                 <li><a href="index.html">ホーム</a></li>
                 <li><a href="self-intro.html">自己紹介</a></li>
-                <li><a href="vision.html">ビジョン</a></li>
+                <li><a href="BI-require.html">BIグループが望むスキル</a></li>
                 <li><a href="ojt.html">OJT計画</a></li>
+                <li><a href="vision.html">ビジョン</a></li>
             </ul>
         </nav>
     </header>
 
-    <main class="container" style="padding-top: 100px;">
-        <section class="milestone">
-            <h1 class="section-title">OJT計画</h1>
+    <main role="main">
+        <section class="section hero">
+            <div class="container">
+                <h1>OJT計画</h1>
+            </div>
+        </section>
 
-            <div class="timeline">
-                <div class="milestone-item">
-                    <div class="milestone-point"></div>
-                    <div class="milestone-content">
-                        <h2 class="milestone-title">応用情報 取得</h2>
-                        <p class="milestone-date">2024年10月</p>
+        <section class="section milestone">
+            <div class="container">
+                <h2 class="section-title">資格・スキル取得計画</h2>
+
+                <div class="timeline">
+                    <div class="milestone-item">
+                        <div class="milestone-point"></div>
+                        <div class="milestone-content">
+                            <h3 class="milestone-title">応用情報 取得</h3>
+                            <p class="milestone-date">2024年10月</p>
+                        </div>
+                    </div>
+
+                    <div class="milestone-item">
+                        <div class="milestone-point"></div>
+                        <div class="milestone-content">
+                            <h3 class="milestone-title">TOEIC830点 取得</h3>
+                            <p class="milestone-date">2025年6月</p>
+                        </div>
+                    </div>
+
+                    <div class="milestone-item">
+                        <div class="milestone-point"></div>
+                        <div class="milestone-content">
+                            <h3 class="milestone-title">TOEIC860点 取得</h3>
+                            <p class="milestone-date">2025年12月</p>
+                        </div>
+                    </div>
+
+                    <div class="milestone-item">
+                        <div class="milestone-point"></div>
+                        <div class="milestone-content">
+                            <h3 class="milestone-title">TOEIC900点 取得</h3>
+                            <p class="milestone-date">2026年6月</p>
+                        </div>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <div class="milestone-item">
-                    <div class="milestone-point"></div>
-                    <div class="milestone-content">
-                        <h2 class="milestone-title">TOEIC830点 取得</h2>
-                        <p class="milestone-date">2025年6月</p>
+        <section class="section business-knowledge">
+            <div class="container">
+                <h2 class="section-title">業務知識</h2>
+
+                <div class="knowledge-grid">
+                    <div class="knowledge-item">
+                        <h3>1年目</h3>
+                        <p>勉強会やアサインされた業務を通じて、EPC業務に関する知識を習得する</p>
                     </div>
-                </div>
 
-                <div class="milestone-item">
-                    <div class="milestone-point"></div>
-                    <div class="milestone-content">
-                        <h2 class="milestone-title">TOEIC860点 取得</h2>
-                        <p class="milestone-date">2025年12月</p>
+                    <div class="knowledge-item">
+                        <h3>2年目</h3>
+                        <p>主担当のシステムを持ち、日常の業務を通じてユーザ業務内容・背景等の理解を深める</p>
                     </div>
-                </div>
 
-                <div class="milestone-item">
-                    <div class="milestone-point"></div>
-                    <div class="milestone-content">
-                        <h2 class="milestone-title">TOEIC900点 取得</h2>
-                        <p class="milestone-date">2026年6月</p>
+                    <div class="knowledge-item">
+                        <h3>3年目</h3>
+                        <p>顧客の課題解決のためのサービスの提案を行う</p>
                     </div>
                 </div>
             </div>
