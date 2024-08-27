@@ -244,7 +244,101 @@
             max-width: 600px;
             margin: 0 auto;
         }
+
+        .skills-section {
+            background-color: var(--bg-color);
+            padding-bottom: 60px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .skill-item {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .skill-item h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .skill-item ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .skill-item li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .skill-item li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+        }
+
+        .yearly-goals {
+            margin-top: 40px;
+        }
+
+        .yearly-goal {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .goal-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .goal-icon {
+            width: 60px;
+            height: 60px;
+            background-color: #3498db;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            margin-right: 20px;
+        }
+
+        .goal-year {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .goal-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .goal-detail h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .goal-detail p {
+            color: #666;
+        }
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 
 <body>
@@ -314,22 +408,110 @@
 
                 <div class="knowledge-grid">
                     <div class="knowledge-item">
-                        <h3>1年目</h3>
-                        <p>勉強会やアサインされた業務を通じて、EPC業務に関する知識を習得する</p>
+                        <h3>顧客業務関連</h3>
+                        <p>EPC業務、エンジニアリング系システム、3D CAD製品</p>
                     </div>
 
                     <div class="knowledge-item">
-                        <h3>2年目</h3>
-                        <p>主担当のシステムを持ち、日常の業務を通じてユーザ業務内容・背景等の理解を深める</p>
+                        <h3>実業務関連</h3>
+                        <p>3D関連、AVEVA関連の運用業務、配管部、計装部、JGC JAPAN</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="section business-knowledge">
+            <div class="container">
+                <h2 class="section-title">開発力</h2>
+
+                <div class="knowledge-grid">
+                    <div class="knowledge-item">
+                        <h3>3D関連開発業務</h3>
+                        <p>配管サポート業務、C#、SQL</p>
                     </div>
 
                     <div class="knowledge-item">
-                        <h3>3年目</h3>
-                        <p>顧客の課題解決のためのサービスの提案を行う</p>
+                        <h3>AVEVA開発運用業務</h3>
+                        <p>PML、VBA</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="section yearly-goals">
+            <div class="container">
+                <h2 class="section-title">実業務関連</h2>
+                <div class="yearly-goal">
+                    <div class="goal-header">
+                        <div class="goal-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h2 class="goal-year">1年目</h2>
+                    </div>
+                    <div class="goal-details">
+                        <div class="goal-detail">
+                            <h3>目標:</h3>
+                            <p>3D, AVEVA運用業務の流れを知る</p>
+                        </div>
+                        <div class="goal-detail">
+                            <h3>手段:</h3>
+                            <p>先輩社員のフォローを受けながら運用業務をこなす</p>
+                        </div>
+                        <div class="goal-detail">
+                            <h3>KPI:</h3>
+                            <p>運用業務を累計350時間以上経験する</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="yearly-goal">
+                    <div class="goal-header">
+                        <div class="goal-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h2 class="goal-year">2年目</h2>
+                    </div>
+                    <div class="goal-details">
+                        <div class="goal-detail">
+                            <h3>目標:</h3>
+                            <p>関連している顧客の業務<br>背景を理解する</p>
+                        </div>
+                        <div class="goal-detail">
+                            <h3>手段:</h3>
+                            <p>顧客とのミーティングに参加、問合せ対応をこなす</p>
+                        </div>
+                        <div class="goal-detail">
+                            <h3>KPI:</h3>
+                            <p>運用業務を累計950時間以上経験する</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="yearly-goal">
+                    <div class="goal-header">
+                        <div class="goal-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h2 class="goal-year">3年目</h2>
+                    </div>
+                    <div class="goal-details">
+                        <div class="goal-detail">
+                            <h3>目標:</h3>
+                            <p>専門性の向上と業界知識の拡大</p>
+                        </div>
+                        <div class="goal-detail">
+                            <h3>手段:</h3>
+                            <p>専門分野の深掘りと他部門との連携</p>
+                        </div>
+                        <div class="goal-detail">
+                            <h3>KPI:</h3>
+                            <p>特定分野での専門資格取得</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
+
     </main>
 
     <footer>
