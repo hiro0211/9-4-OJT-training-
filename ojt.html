@@ -184,9 +184,11 @@
             }
         }
 
+        /* 業務知識のデザイン */
         .business-knowledge {
             background-color: var(--bg-color);
-            padding-bottom: 50px;
+            padding-bottom: 40px;
+            padding-top: 50px;
         }
 
         .knowledge-grid {
@@ -337,6 +339,75 @@
         .goal-detail p {
             color: #666;
         }
+
+        .section-yearly-goals {
+            background-color: var(--bg-color);
+            padding: 2rem 0;
+        }
+
+        .section-title {
+            color: #333;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .yearly-goal-container {
+            margin-top: 1rem;
+        }
+
+        .yearly-goal-card {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+        }
+
+        .yearly-goal-year {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .objective-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .objective-item {
+            border-left-width: 4px;
+            border-radius: 0.25rem;
+            padding: 1rem;
+        }
+
+        .objective-item.goal {
+            background-color: #f0f0f0;
+            border-left-color: #007bff;
+        }
+
+        .objective-item.means {
+            background-color: #f0f0f0;
+            border-left-color: #28a745;
+        }
+
+        .objective-item.kpi {
+            background-color: #f0f0f0;
+            border-left-color: #dc3545;
+        }
+
+        .objective-title {
+            font-size: 1rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .objective-content {
+            font-size: 1rem;
+            color: #333;
+        }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
@@ -362,45 +433,7 @@
             </div>
         </section>
 
-        <section class="section milestone">
-            <div class="container">
-                <h2 class="section-title">資格・スキル取得計画</h2>
 
-                <div class="timeline">
-                    <div class="milestone-item">
-                        <div class="milestone-point"></div>
-                        <div class="milestone-content">
-                            <h3 class="milestone-title">応用情報 取得</h3>
-                            <p class="milestone-date">2024年10月</p>
-                        </div>
-                    </div>
-
-                    <div class="milestone-item">
-                        <div class="milestone-point"></div>
-                        <div class="milestone-content">
-                            <h3 class="milestone-title">TOEIC830点 取得</h3>
-                            <p class="milestone-date">2025年6月</p>
-                        </div>
-                    </div>
-
-                    <div class="milestone-item">
-                        <div class="milestone-point"></div>
-                        <div class="milestone-content">
-                            <h3 class="milestone-title">TOEIC860点 取得</h3>
-                            <p class="milestone-date">2025年12月</p>
-                        </div>
-                    </div>
-
-                    <div class="milestone-item">
-                        <div class="milestone-point"></div>
-                        <div class="milestone-content">
-                            <h3 class="milestone-title">TOEIC900点 取得</h3>
-                            <p class="milestone-date">2026年6月</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
         <section class="section business-knowledge">
             <div class="container">
@@ -421,21 +454,27 @@
             </div>
         </section>
 
-        <section class="section business-knowledge">
+        <section class="section section-yearly-goals">
             <div class="container">
-                <h2 class="section-title">開発力</h2>
-
-                <div class="knowledge-grid">
-                    <div class="knowledge-item">
-                        <h3>3D関連開発業務</h3>
-                        <p>配管サポート業務、C#、SQL</p>
+                <h2 class="section-title">顧客業務関連</h2>
+                <div class="yearly-goal-container">
+                    <div class="yearly-goal-card">
+                        <h3 class="yearly-goal-year">1年目</h3>
+                        <div class="objective-container">
+                            <section class="objective-item goal">
+                                <h4 class="objective-title">目標：</h4>
+                                <p class="objective-content">EPC業務、専門用語、業務関連製品を把握した上で顧客と対話することで信頼を得る</p>
+                            </section>
+                            <section class="objective-item means">
+                                <h4 class="objective-title">手段：</h4>
+                                <p class="objective-content">先輩社員のフォローを受けながら運用業務をこなす</p>
+                            </section>
+                            <section class="objective-item kpi">
+                                <h4 class="objective-title">KPI：</h4>
+                                <p class="objective-content">運用業務を累計350時間以上経験する</p>
+                            </section>
+                        </div>
                     </div>
-
-                    <div class="knowledge-item">
-                        <h3>AVEVA開発運用業務</h3>
-                        <p>PML、VBA</p>
-                    </div>
-
                 </div>
             </div>
         </section>
@@ -506,6 +545,90 @@
                         <div class="goal-detail">
                             <h3>KPI:</h3>
                             <p>特定分野での専門資格取得</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section business-knowledge">
+            <div class="container">
+                <h2 class="section-title">開発力</h2>
+
+                <div class="knowledge-grid">
+                    <div class="knowledge-item">
+                        <h3>3D関連開発業務</h3>
+                        <p>配管サポート業務、C#、SQL</p>
+                    </div>
+
+                    <div class="knowledge-item">
+                        <h3>AVEVA開発運用業務</h3>
+                        <p>PML、VBA</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-yearly-goals">
+            <div class="container">
+                <h2 class="section-title">1年目の目標計画</h2>
+                <div class="yearly-goal-container">
+                    <div class="yearly-goal-card">
+                        <h3 class="yearly-goal-year">1年目</h3>
+                        <div class="objective-container">
+                            <section class="objective-item goal">
+                                <h4 class="objective-title">目標：</h4>
+                                <p class="objective-content">3D, AVEVA運用業務の流れを知る</p>
+                            </section>
+                            <section class="objective-item means">
+                                <h4 class="objective-title">手段：</h4>
+                                <p class="objective-content">先輩社員のフォローを受けながら運用業務をこなす</p>
+                            </section>
+                            <section class="objective-item kpi">
+                                <h4 class="objective-title">KPI：</h4>
+                                <p class="objective-content">運用業務を累計350時間以上経験する</p>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section milestone">
+            <div class="container">
+                <h2 class="section-title">資格・スキル取得計画</h2>
+
+                <div class="timeline">
+                    <div class="milestone-item">
+                        <div class="milestone-point"></div>
+                        <div class="milestone-content">
+                            <h3 class="milestone-title">応用情報 取得</h3>
+                            <p class="milestone-date">2024年10月</p>
+                        </div>
+                    </div>
+
+                    <div class="milestone-item">
+                        <div class="milestone-point"></div>
+                        <div class="milestone-content">
+                            <h3 class="milestone-title">TOEIC830点 取得</h3>
+                            <p class="milestone-date">2025年6月</p>
+                        </div>
+                    </div>
+
+                    <div class="milestone-item">
+                        <div class="milestone-point"></div>
+                        <div class="milestone-content">
+                            <h3 class="milestone-title">TOEIC860点 取得</h3>
+                            <p class="milestone-date">2025年12月</p>
+                        </div>
+                    </div>
+
+                    <div class="milestone-item">
+                        <div class="milestone-point"></div>
+                        <div class="milestone-content">
+                            <h3 class="milestone-title">TOEIC900点 取得</h3>
+                            <p class="milestone-date">2026年6月</p>
                         </div>
                     </div>
                 </div>
