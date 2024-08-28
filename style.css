@@ -34,11 +34,59 @@ header {
     z-index: 1000;
 }
 
+/* ----------------- ハンバーガーメニューのスタイル -------------- */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger-menu span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--secondary-color);
+    margin: 2px 0;
+    transition: 0.4s;
+}
+
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 0;
+        text-align: center;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 10px 0;
+    }
+}
+
+/* -----------------------ハンバーガーメニュ------------------- */
+
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 0;
+    padding: 100px 0;
     /* パディングを増やして縦幅を大きくする */
 }
 
@@ -47,6 +95,16 @@ nav {
     /* ロゴのフォントサイズを大きくする */
     font-weight: bold;
     color: var(--primary-color);
+}
+.logo-link {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.logo-link:hover {
+    text-decoration: none;
+    color: inherit;
 }
 
 .nav-links {
@@ -131,14 +189,18 @@ nav {
 
 .feature i {
     font-size: 3em;
-    color: var(--primary-color);
+    color: #3498db; /* 青色のアイコン */
     margin-bottom: 20px;
 }
 
 .feature h3 {
     font-size: 1.5em;
     margin-bottom: 15px;
-    color: var(--secondary-color);
+    color: #333333; /* ダークグレーのテキスト */
+}
+
+.feature p {
+    color: #666666; /* ミディアムグレーのテキスト */
 }
 
 footer {
@@ -237,13 +299,6 @@ footer {
 .milestone {
     padding: 100px 0;
     background-color: var(--bg-color);
-}
-
-.section-title {
-    font-size: 2.5em;
-    text-align: center;
-    margin-bottom: 50px;
-    color: var(--secondary-color);
 }
 
 .timeline {
@@ -367,3 +422,858 @@ footer {
 
 
 }
+
+        /* OJT計画書のスタイル */
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --bg-color: #ecf0f1;
+            --text-color: #34495e;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 0;
+        }
+
+        .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 40px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--secondary-color);
+            font-weight: 500;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .milestone {
+            padding: 100px 0;
+            background-color: var(--bg-color);
+        }
+
+        .section-title {
+            font-size: 2.5em;
+            text-align: left;
+            margin-bottom: 50px;
+            color: var(--secondary-color);
+        }
+
+        .timeline {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            padding: 60px 0;
+            /* パディングを増やして、上下のスペースを確保 */
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 70px;
+            /* 上からの位置を固定 */
+            left: 0;
+            right: 0;
+            height: 4px;
+            background-color: var(--secondary-color);
+        }
+
+        .milestone-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+            min-width: 150px;
+        }
+
+        .milestone-point {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            position: relative;
+            z-index: 2;
+            margin-bottom: 20px;
+            /* 点の下のスペースを増やす */
+        }
+
+        .milestone-content {
+            text-align: center;
+            max-width: 150px;
+        }
+
+
+        .milestone-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: var(--secondary-color);
+            margin-bottom: 5px;
+        }
+
+        .milestone-date {
+            font-size: 0.9em;
+            color: var(--text-color);
+        }
+
+        footer {
+            background-color: var(--secondary-color);
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+        }
+
+        @media (max-width: 768px) {
+            .timeline {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 20px 0;
+            }
+
+            .timeline::before {
+                top: 0;
+                bottom: 0;
+                left: 10px;
+                width: 4px;
+                height: auto;
+            }
+
+            .milestone-item {
+                flex-direction: row;
+                margin-bottom: 20px;
+                width: 100%;
+            }
+
+            .milestone-point {
+                margin-right: 20px;
+                margin-bottom: 0;
+            }
+
+            .milestone-content {
+                text-align: left;
+            }
+        }
+
+        /* 業務知識のデザイン */
+        .business-knowledge {
+            background-color: var(--bg-color);
+            padding-bottom: 40px;
+            padding-top: 50px;
+        }
+
+        .knowledge-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .knowledge-item {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            height: 100%;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .knowledge-item h3 {
+            margin-bottom: 15px;
+            padding: 5px 10px;
+            background-color: #3498db;
+            color: white;
+            border-radius: 4px;
+            display: inline-block;
+        }
+
+        .knowledge-item p {
+            flex-grow: 1;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .knowledge-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 100px 0 50px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .skills-section {
+            background-color: var(--bg-color);
+            padding-bottom: 60px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .skill-item {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .skill-item h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .skill-item ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .skill-item li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .skill-item li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+        }
+
+        .yearly-goals {
+            margin-top: 40px;
+        }
+
+        .yearly-goal {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .goal-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .goal-icon {
+            width: 60px;
+            height: 60px;
+            background-color: #3498db;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            margin-right: 20px;
+        }
+
+        .goal-year {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .goal-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .goal-detail h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .goal-detail p {
+            color: #666;
+        }
+
+        .section-yearly-goals {
+            background-color: var(--bg-color);
+            padding: 2rem 0;
+        }
+
+        .yearly-goal-container {
+            margin-top: 1rem;
+        }
+
+        .yearly-goal-card {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+        }
+
+        .yearly-goal-year {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .objective-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .objective-item {
+            border-left-width: 4px;
+            border-radius: 0.25rem;
+            padding: 1rem;
+        }
+
+        .objective-item.goal {
+            background-color: #f0f0f0;
+            border-left-color: #007bff;
+        }
+
+        .objective-item.means {
+            background-color: #f0f0f0;
+            border-left-color: #28a745;
+        }
+
+        .objective-item.kpi {
+            background-color: #f0f0f0;
+            border-left-color: #dc3545;
+        }
+
+        .objective-title {
+            font-size: 1rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .objective-content {
+            font-size: 1rem;
+            color: #333;
+        }
+
+        /* BI-require.htmlのスタイル */
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --bg-color: #ecf0f1;
+            --text-color: #34495e;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 0;
+        }
+
+        .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 40px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--secondary-color);
+            font-weight: 500;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        main {
+            padding-top: 100px;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            animation: fadeInUp 1s ease 0.5s both;
+        }
+
+        .value-section {
+            padding: 80px 0;
+        }
+
+        .value-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .value-item {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .value-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .value-item h3 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+        }
+
+        .value-item p {
+            color: var(--text-color);
+        }
+
+        footer {
+            background-color: var(--secondary-color);
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2em;
+            }
+
+            .hero p {
+                font-size: 1em;
+            }
+
+            .value-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .skills-section {
+            background-color: var(--bg-color);
+            padding-bottom: 60px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .skill-item {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .skill-item h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .skill-item ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .skill-item li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .skill-item li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+        }
+
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --bg-color: #ecf0f1;
+            --text-color: #34495e;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 0;
+        }
+
+        .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 40px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--secondary-color);
+            font-weight: 500;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* --------------自己紹介のスタイル------- */
+
+        main {
+            padding-top: 100px;
+        }
+
+        .section {
+            padding: 80px 0;
+        }
+
+        .section h2 {
+            font-size: 2em;
+            margin-bottom: 30px;
+            color: var(--secondary-color);
+        }
+
+        .profile-image {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .profile-image img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .skill {
+            margin-bottom: 20px;
+        }
+
+        .skill h3 {
+            margin-bottom: 10px;
+        }
+
+        .skill-bar {
+            background-color: #ddd;
+            height: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .skill-progress {
+            background-color: var(--primary-color);
+            height: 100%;
+            display: flex;
+            align-items: center;
+            padding-left: 10px;
+            color: white;
+            font-size: 0.8em;
+        }
+
+        footer {
+            background-color: var(--secondary-color);
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            main {
+                padding-top: 80px;
+            }
+        }
+
+        /* ---------------------- VISION.htmlのスタイル --------------- */
+
+        .vision-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .vision-item {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .vision-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .vision-item h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+
+        .vision-item p {
+            color: var(--text-color);
+        }
+
+        .qualification-timeline {
+            margin-top: 50px;
+            position: relative;
+            padding: 30px 0;
+        }
+
+        .qualification-timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 4px;
+            height: 100%;
+            background-color: var(--primary-color);
+            transform: translateX(-50%);
+        }
+
+        .qualification-item {
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .qualification-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            width: 45%;
+            position: relative;
+        }
+
+        .qualification-content::after {
+            content: '';
+            position: absolute;
+            top: 20px;
+            width: 20px;
+            height: 20px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+        }
+
+        .qualification-item:nth-child(odd) .qualification-content {
+            margin-left: auto;
+        }
+
+        .qualification-item:nth-child(odd) .qualification-content::after {
+            left: -60px;
+        }
+
+        .qualification-item:nth-child(even) .qualification-content::after {
+            right: -60px;
+        }
+
+        .qualification-title {
+            font-size: 1.2em;
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+        }
+
+        .qualification-date {
+            font-size: 0.9em;
+            color: var(--text-color);
+        }
+
+        @media (max-width: 768px) {
+            .qualification-timeline::before {
+                left: 20px;
+            }
+
+            .qualification-content {
+                width: calc(100% - 50px);
+                margin-left: 50px !important;
+            }
+
+            .qualification-content::after {
+                left: -45px !important;
+            }
+        }
+
+        /* -------------------- 終了--------------------------- */
